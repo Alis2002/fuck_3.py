@@ -1,5 +1,5 @@
 import glob
-from fpdf import FPDF, fpdf
+from fpdf import FPDF
 from fuck_3 import getTextFile
 
 
@@ -36,5 +36,3 @@ for f_two in arr_q:
     # pdf.set_fill_color(128)
 pdf.output("simple_demo.pdf")
 
-# qqq = f"txt{getTextFile(file_path)}{2*2}"
-# print(qqq)
