@@ -1,48 +1,28 @@
 import glob
+import os
+
 from fpdf import FPDF
-import os.path
-import sys
 from fuck_3 import getTextFile
 
 
-pdf = FPDF(orientation='l', format='A4')
-pdf.set_font('Times')
-
-fos_ware = r"C:\prog\pythonPr\wave.PNG"
 arr_q = [f for f in glob.glob("files*.jpeg")]
-text_sorted = sorted([f for f in glob.glob("files*jpeg.txt")])
-ware = r"C:/prog/pythonPr/"
+arr_text = [f for f in glob.glob("files*.jpeg.txt")]
 sort = sorted(arr_q)
-for x in text_sorted:
-    local_link = ware + x
-    get_link = (getTextFile(local_link))
-    print(local_link)
-cent_q = 1
+link = r"C:/prog/pythonPr/"
+file_path = r"C:/prog/pythonPr/files1.jpeg.txt"
+pdf = FPDF()
+pdf.set_font("Arial", size=12)
 
 
-
-
-def create_counter():
-    i = 0
-
-    def func():
-        nonlocal i
-        i += 1
-        return i
-
-    return func
-
-
-counter = create_counter()
-for image_file in sort:
+for f_two in arr_q:
     pdf.add_page()
-    pdf.image(image_file, w=210, x=35, y=20)
-    pdf.set_fill_color(173, 255, 47)
-    pdf.cell(w=80, h=90, txt='hgvhg', border='T'+'L', ln=2, align='C', fill=True, link='')
+    print(f_two)
+    txt_rename = f"{f_two}.txt"
+    print(txt_rename)
+    pdf.set_font("Arial", size=12)
+    pdf.image(f_two, w=210, x=35, y=20)
+    pdf.cell(220, 10, getTextFile(txt_rename), 10)
+pdf.output("simple_demo.pdf")
 
-
-    # pdf.image(image_file, w=210, x=35, y=20)
-()
-
-
-pdf.output("image.pdf")
+# qqq = f"txt{getTextFile(file_path)}{2*2}"
+# print(qqq)

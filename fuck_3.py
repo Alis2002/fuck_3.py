@@ -22,7 +22,6 @@ def getTextFile(pathFile):
             return False
     else:
         if os.path.exists(pathFile):
-            print("я нашел")
             r_ead_open = open(pathFile, "r+").read()
             return r_ead_open
         else:
