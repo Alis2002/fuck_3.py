@@ -19,7 +19,7 @@ pdf = FPDF(orientation='l')
 pdf.set_font("Arial", size=20)
 pdf.add_page()
 pdf.image(ware_image, w=300, x=0, y=0)
-
+pdf.cell(270, 140, 'Ghtpt', align="C")
 
 for f_two in arr_q:
     counter = counter+1
