@@ -22,7 +22,7 @@ def getTextFile(pathFile):
             return False
     else:
         if os.path.exists(pathFile):
-            r_ead_open = open(pathFile, "r+").read()
+            r_ead_open = open(pathFile, "r+",encoding='utf-8').read().strip()
             return r_ead_open
         else:
             return
