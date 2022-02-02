@@ -13,7 +13,6 @@ from test import CustomPDF
 path =r'C:/prog/pythonPr/cat/C073 Маяковская/'
 ware_image = r"C:/prog/pythonPr/wave.png"
 
-
 arr_q = [f for f in glob.glob(path + 'Кожух/foto*.jpg')]
 # arr_q = [f for f in glob.glob(path + 'Матрица/foto*.jpg')]
 # кожух
